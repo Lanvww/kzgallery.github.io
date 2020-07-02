@@ -1,0 +1,148 @@
+.active {
+  background-color: rgb(238, 224, 188);
+  color: black;
+}
+
+/*
+  font-family: source-han-serif-tc, serif;
+  font-weight: 200;
+  font-style: normal;
+  
+  font-family: source-han-serif-tc,serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-family: source-han-serif-tc,serif;
+  font-weight: 500;
+  font-style: normal;
+  */
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+img {
+  display: block;
+  float: left;
+  height: 400px;
+
+}
+
+body {
+  background-color: #000000;
+}
+
+
+
+p {
+  font-family: source-han-serif-tc, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.title {
+  position: absolute;
+  writing-mode: vertical-lr;
+  font-family: source-han-serif-tc, serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: black;
+  color: white;
+  font-size: 20vw;
+  margin: 0px;
+  line-height: 23vw;
+  width: 50%;
+  height: 45vw;
+  top: 50%;
+  left: 75%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slogan {
+  position: absolute;
+  display: inline;
+  font-family: source-han-serif-tc, serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  font-size: 3vw;
+  top: 50%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slogan p {
+  font-family: source-han-serif-tc, serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0px;
+  padding: 0;
+  transition: linear 1s;
+
+}
+
+.slogan:hover p {
+  color: rgba(255, 255, 255, 0.5);
+  filter: blur(2rem);
+  margin: 0px;
+  padding: 0;
+  transition: linear 1s;
+}
+
+.menu {
+  font-family: source-han-serif-tc, serif;
+  filter: blur(0);
+  font-weight: 500;
+  font-style: normal;
+  list-style-type: none;
+  position: absolute;
+  text-align: center;
+  display: none;
+  color: rgba(255, 255, 255, 0);
+  z-index: 1;
+  transition: linear 1s;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slogan:hover .menu {
+  display: block;
+  color: white;
+  filter: blur(0);
+  transition: linear 1s;
+}
+
+.menu li {
+  margin: 1%;
+}
+
+li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+li a:active{
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (min-width: 1300px) {}

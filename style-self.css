@@ -1,0 +1,182 @@
+.active {
+  background-color: rgb(238, 224, 188);
+  color: black;
+}
+
+/*
+  font-family: source-han-serif-tc, serif;
+  font-weight: 200;
+  font-style: normal;
+  
+  font-family: source-han-serif-tc,serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-family: source-han-serif-tc,serif;
+  font-weight: 500;
+  font-style: normal;
+  */
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+img {
+  display: block;
+  float: left;
+  height: 400px;
+
+}
+
+body {
+  background-color: #ffffff;
+}
+
+
+
+p {
+  font-family: source-han-serif-tc, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.menu {
+  font-family: source-han-serif-tc, serif;
+  filter: blur(0);
+  font-weight: 500;
+  font-style: normal;
+  list-style-type: none;
+  position: absolute;
+  text-align: center;
+  display: none;
+  color: rgba(255, 255, 255, 0);
+  z-index: 1;
+  transition: linear 1s;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slogan:hover .menu {
+  display: block;
+  color: white;
+  filter: blur(0);
+  transition: linear 1s;
+}
+
+.menu li {
+  margin: 1%;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.marquee-1 {
+  position: absolute;
+  width: 99%;
+  font-size: 10em;
+  font-family: source-han-serif-tc, serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee-1 10s linear infinite;
+  -webkit-animation: marquee-1 10s linear infinite;
+}
+
+.marquee-1 {
+  top: 0;
+}
+
+.marquee-2 {
+  position: absolute;
+  width: 99%;
+  font-size: 10em;
+  font-family: source-han-serif-tc, serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee-2 15s linear infinite;
+  -webkit-animation: marquee-2 15s linear infinite;
+}
+
+.marquee-2 {
+  bottom: 0;
+}
+
+.marquee-1:hover,
+.marquee-2:hover {
+  animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee-1 {
+  0% {
+    text-indent: 100%;
+  }
+
+  100% {
+    text-indent: -10em;
+  }
+}
+
+@-webkit-keyframes marquee-1 {
+  0% {
+    text-indent: 100%;
+  }
+
+  100% {
+    text-indent: -10em;
+  }
+}
+
+@keyframes marquee-2 {
+  0% {
+    text-indent: 100%;
+  }
+
+  100% {
+    text-indent: -15em;
+  }
+}
+
+@-webkit-keyframes marquee-2 {
+  0% {
+    text-indent: 100%;
+  }
+
+  100% {
+    text-indent: -15em;
+  }
+}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (min-width: 1300px) {}

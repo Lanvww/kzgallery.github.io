@@ -1,0 +1,57 @@
+.active {
+    background-color: rgb(238, 224, 188);
+    color: black;
+}
+
+
+img {
+    display: block;
+    height: 400px;
+    float: none;
+    position: relative;
+    margin: auto;
+}
+
+img:hover,
+h1:hover,
+p:hover {
+    transition-duration: 1s;
+    filter: blur(5px);
+}
+
+
+p {
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    text-align: center;
+
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 130px;
+    margin: 0;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    img {
+        display: block;
+        float: none;
+        margin: auto;
+        max-width: 55%;
+        height: auto;
+    }
+
+    h1 {
+        max-height: 30%;
+        max-width: 100%;
+        font-size: 4.3rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1300px) {}
