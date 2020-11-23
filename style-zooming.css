@@ -120,7 +120,7 @@ h2 {
 .container {
   display: flex;
   width: 100%;
-  padding: 4% 2%;
+  padding: 2% 2%;
   box-sizing: border-box;
   height: auto;
 }
@@ -137,21 +137,22 @@ h2 {
 
 
 .box>img {
-  height: 100%;
-  width: 100%;
+
   object-fit: cover;
   transition: .5s;
 }
 
 .value-img {
   text-align: center;
-  margin: 2em;
+  height: 100%;
+  width: 100%;
+  margin: 02em;
 }
 
 img {
-  max-width: 30%;
-  max-height: 10%;
+  max-width: 100%;
 }
+
 /*
 .box:hover {
   flex: 1 1 50%;
