@@ -3,20 +3,6 @@
   color: black;
 }
 
-/*
-  font-family: source-han-serif-tc, serif;
-  font-weight: 200;
-  font-style: normal;
-  
-  font-family: source-han-serif-tc,serif;
-  font-weight: 700;
-  font-style: normal;
-
-  font-family: source-han-serif-tc,serif;
-  font-weight: 500;
-  font-style: normal;
-  */
-
 .noselect {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -39,12 +25,6 @@ img {
   height: 400px;
 
 }
-
-body {
-  background-color: #ffffff;
-}
-
-
 
 p {
   font-family: source-han-serif-tc, serif;
@@ -79,6 +59,7 @@ p {
 
 .menu li {
   margin: 1%;
+  animation-delay: 0.3s;
 }
 
 li a {
@@ -91,91 +72,107 @@ li a:active {
   text-decoration: none;
 }
 
-.marquee-1 {
+.marquee-top, .marquee-bottom  {
   position: absolute;
   width: 99%;
-  font-size: 10em;
-  font-family: source-han-serif-tc, serif;
-  font-weight: 700;
-  font-style: normal;
   margin: 0 auto;
-  text-align: left;
   overflow: hidden;
   white-space: nowrap;
-  box-sizing: border-box;
-  animation: marquee-1 10s linear infinite;
-  -webkit-animation: marquee-1 10s linear infinite;
 }
 
-.marquee-1 {
+.marquee-top {
   top: 0;
 }
 
-.marquee-2 {
-  position: absolute;
-  width: 99%;
-  font-size: 10em;
-  font-family: source-han-serif-tc, serif;
-  font-weight: 700;
-  font-style: normal;
-  margin: 0 auto;
-  text-align: left;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  animation: marquee-2 15s linear infinite;
-  -webkit-animation: marquee-2 15s linear infinite;
-}
-
-.marquee-2 {
+.marquee-bottom {
   bottom: 0;
 }
 
-.marquee-1:hover,
-.marquee-2:hover {
-  animation-play-state: paused
+.marquee-top span,.marquee-bottom span {
+  display: inline-block;
+  font-size: 10em;
+  position: relative;
+  will-change: transform;
+  animation: marquee 2s linear infinite;
 }
 
-/* Make it move */
-@keyframes marquee-1 {
-  0% {
-    text-indent: 100%;
-  }
-
-  100% {
-    text-indent: -10em;
-  }
+.marquee-bottom span {
+  font-size: 9em;
+  animation: marquee 4s linear infinite;
 }
 
-@-webkit-keyframes marquee-1 {
-  0% {
-    text-indent: 100%;
-  }
 
-  100% {
-    text-indent: -10em;
-  }
+.marquee-top:hover span,.marquee-bottom:hover span {
+  animation-play-state: paused;
 }
 
-@keyframes marquee-2 {
-  0% {
-    text-indent: 100%;
-  }
-
-  100% {
-    text-indent: -15em;
-  }
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
 }
 
-@-webkit-keyframes marquee-2 {
-  0% {
-    text-indent: 100%;
-  }
 
-  100% {
-    text-indent: -15em;
-  }
+.flying {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	display: flex;
+	align-items: center;
 }
+
+#mode-toggler {
+	font-size: 22px;
+	padding: 15px 30px;
+	border-radius: 50px;
+	letter-spacing: .5px;
+	font-weight: 700;
+	min-width: 200px;
+	border: 0;
+}
+
+#mode-remover {
+	padding: 8px;
+	width: 34px;
+	margin-right: 10px;
+	border-radius: 50%;
+	font-size: 18px;
+	font-weight: 700;
+	border: 0;
+	transition: opacity .15s ease, visibility .15s ease;
+}
+
+#mode-remover.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	padding: 8px 16px;
+	border: 2px solid #3bc4fb;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+	color: inherit;
+	background-color: transparent;
+	text-decoration: none;
+	white-space: nowrap;
+	user-select: none;
+	text-align: center;
+	transition: all .15s ease;
+}
+
+.btn:hover {
+	background-color: #3bc4fb;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+
 
 @media screen and (max-width: 600px) {}
 

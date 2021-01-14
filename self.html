@@ -54,16 +54,84 @@
             s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-    <link rel="stylesheet" href="style-self.css" />
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="src/css/light.css">
+    </noscript>
+    <link rel="stylesheet" href="src/css/style-self.css" />
 </head>
 
 <body>
-    <div>
-        <p class="marquee-1 noselect">藝術學生 文人騷客</p>
-    </div>
-    <div>
-        <p class="marquee-2 noselect">ART STUDENT GOOD PERSON</p>
-    </div>
+    <p class="marquee-top noselect">
+        <span>藝術學生 文人騷客</span>
+        <span>藝術學生 文人騷客</span>
+        <span>藝術學生 文人騷客</span>
+        <span>藝術學生 文人騷客</span>
+    </p>
+
+    <p class="marquee-bottom noselect">
+        <span>ART STUDENT GOOD PERSON</span>
+        <span>ART STUDENT GOOD PERSON</span>
+        <span>ART STUDENT GOOD PERSON</span>
+        <span>ART STUDENT GOOD PERSON</span>
+    </p>
 </body>
+
+<footer>
+    <div class="flying">
+        <button id="mode-remover" class="btn hidden" title="Clear saved mode">
+            &times;
+        </button>
+        <button id="mode-toggler" class="btn">
+            Turn on Javascript 🌓
+        </button>
+    </div>
+</footer>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="src/js/darkmode.js"></script>
+<script>
+    var options = {
+        light: "src/css/light.css",
+        dark: "src/css/dark.css",
+        startAt: "18:00",
+        endAt: "06:00",
+        checkSystemScheme: true,
+        saveOnToggle: true
+    };
+    var DarkMode = new DarkMode(options);
+
+    // Remove mode from LocalStorage if button clicked
+    var ModeRemover = document.getElementById('mode-remover')
+    ModeRemover.onclick = function () {
+        DarkMode.clearSavedMode()
+        changeTogglerText()
+        getModeRemoverState()
+    }
+
+    // Detects mode on LocalStorage, if `true` – display a button
+    getModeRemoverState()
+
+    function getModeRemoverState() {
+        if (DarkMode.isModeSaved())
+            ModeRemover.classList.remove('hidden')
+        else
+            ModeRemover.classList.add('hidden')
+    }
+
+    // Function for `mode-toggler` button
+    var ModeToggler = document.getElementById('mode-toggler')
+    changeTogglerText()
+    ModeToggler.onclick = function () {
+        DarkMode.toggleMode()
+        changeTogglerText()
+    }
+
+    // Changes `mode-toggler` text on mode changing
+    function changeTogglerText() {
+        getModeRemoverState()
+        var currentMode = DarkMode.getMode()
+        ModeToggler.textContent = currentMode === 'light' ? 'To dark 🌝' : 'To light 🌚'
+    }
+</script>
 
 </html>

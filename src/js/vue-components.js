@@ -32,6 +32,7 @@ Vue.component('kz-slogan', {
             <p>{{slogan}}</p>
             <ul class="menu noselect">
                 <li>ART</li>
+                <li><a href="../../act1.html">Act 1</a></li>
                 <li><a href="../../self.html">SELF</a></li>
             </ul>
     </div>`
